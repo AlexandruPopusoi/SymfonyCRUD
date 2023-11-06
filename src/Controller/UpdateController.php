@@ -45,15 +45,13 @@ class UpdateController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()) {
             $CreateUsersForm = $form->getData();
-            // echo($CreateUsersForm->getSurname());
-            // $user = new User();
+
             $user->setUsername($CreateUsersForm->getUsername());
             $user->setPassword($CreateUsersForm->getPassword());
             $user->setName($CreateUsersForm->getName());
             $user->setSurname($CreateUsersForm->getSurname());
             $user->setEmail($CreateUsersForm->getEmail());
             $user->setBirthDate($CreateUsersForm->getBirthDate());
-            // $user->setRegDate(new \DateTime());
 
             $entityManager->persist($user);
             

@@ -30,8 +30,7 @@ class CreateController extends AbstractController
     {
         $entityManager = $this->entityManager;
         
-        $CreateUsersForm = new CreateUsersForm();
-        // $task->setTask('Write a blog post');        
+        $CreateUsersForm = new CreateUsersForm();      
 
         $form = $this->createForm(CreateForm::class, $CreateUsersForm);
 
@@ -39,7 +38,6 @@ class CreateController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()) {
             $CreateUsersForm = $form->getData();
-            // echo($CreateUsersForm->getSurname());
             $user = new User();
             $user->setUsername($CreateUsersForm->getUsername());
             $user->setPassword($CreateUsersForm->getPassword());
@@ -55,7 +53,6 @@ class CreateController extends AbstractController
 
             return $this->redirectToRoute('read_user');
         }
-
 
         return $this->renderForm('task/create.html.twig',[
             'form' => $form
