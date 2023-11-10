@@ -8,6 +8,10 @@
         {% block head %}
             <link rel="stylesheet" href="style.css"/>
             <title>{% block title %}{% endblock %} - My Webpage</title>
+            <script src="https://kit.fontawesome.com/b5db7f3f9c.js" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
         {% endblock %}
     </head>
     <body>
@@ -25,7 +29,7 @@
         <a class="nav-link" href="/users">Users </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/create">Authenticate </a>
+        <a class="nav-link" href="/users/create">Authenticate </a>
       </li>
     </ul>
   </div>

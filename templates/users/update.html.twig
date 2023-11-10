@@ -7,21 +7,24 @@
 {% block content %}
 <body>
 
+<style>
+    .clickable-row {
+        cursor: pointer;
+    }
+</style>
+
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="mt-5 mb-3">Delete User  </h3>
-                    <h4> {{ user.Username }} </h4>
+                    <h1 class="mt-5 mb-3">Update Users</h1>
 
-                    {{form(form, { 'label': 'Delete' })}}
-    <p><a href="/update/{{delete_id}}" class="btn btn-primary">Back</a></p>
-    <p><a href="/users" class="btn btn-primary">Users</a></p>
+                    {{form(form, { 'label': 'Update' })}}
+
                 </div>
             </div>        
         </div>
     </div>
 
 
-</body>
 {% endblock %}
